@@ -19,7 +19,7 @@ import javax.swing.text.Utilities;
  * 
  * */
 
-public class Guru99Hook {
+public class Hook {
 	public WebDriver _driver;
 	//public Guru99.pages.Guru99HomePage Guru99HomePage;
 	public Utilities util;

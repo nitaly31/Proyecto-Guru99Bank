@@ -8,9 +8,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import Guru99.Guru99Hook.Guru99Hook;
+import Guru99.Guru99Hook.Hook;
 
-public class Guru99Login {
+public class LoginPage {
 	WebDriver driver;
 	
 	By titleText = By.tagName("title");
@@ -20,7 +20,7 @@ public class Guru99Login {
 
 	//Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 
-	public Guru99Login(WebDriver _driver) {
+	public LoginPage(WebDriver _driver) {
 		this.driver = _driver;
 	}
 
