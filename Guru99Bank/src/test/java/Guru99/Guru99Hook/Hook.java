@@ -7,11 +7,13 @@ import org.openqa.selenium.firefox.FirefoxProfile;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
+import Guru99.Guru99Utils.Util;
+
 //import Guru99.pages.Guru99Login;
 
 import java.io.File;
-
-import javax.swing.text.Utilities;
+import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 /*
  * Contendrá los métodos antes y después de cada test, 
@@ -21,13 +23,11 @@ import javax.swing.text.Utilities;
 
 public class Hook {
 	public WebDriver _driver;
-	//public Guru99.pages.Guru99HomePage Guru99HomePage;
-	public Utilities util;
 	public String url;
 
 	@BeforeTest
 	public void setUp() {
-		File file = new File("C:\\Users\\geral\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\5a6l2h23.Guru99Bank");
+		File file = new File(Util.FIREFOX_PATH);
 
 		FirefoxProfile myprofile = new FirefoxProfile(file);
 		FirefoxOptions options = new FirefoxOptions();
@@ -36,7 +36,7 @@ public class Hook {
 		_driver = new FirefoxDriver(options);
 		_driver.get(url);
 		_driver.manage().window().maximize();
-		//Guru99Login login = new Guru99Login(_driver);
+		_driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Util.WAIT_TIME));
 	}
 	
 	@AfterTest
