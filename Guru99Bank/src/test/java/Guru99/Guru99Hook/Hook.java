@@ -13,7 +13,6 @@ import Guru99.Guru99Utils.Util;
 
 import java.io.File;
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
 
 /*
  * Contendrá los métodos antes y después de cada test, 
@@ -41,6 +40,6 @@ public class Hook {
 	
 	@AfterTest
 	public void close() {
-//		_driver.close();
+		_driver.close();
 	}
 }
