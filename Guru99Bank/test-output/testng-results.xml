@@ -1,25 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-22T16:33:07 PET" name="Default suite" finished-at="2023-10-22T16:33:20 PET" duration-ms="13020">
+  <suite started-at="2023-10-25T19:49:16 PET" name="Default suite" finished-at="2023-10-25T19:49:31 PET" duration-ms="14996">
     <groups>
     </groups>
-    <test started-at="2023-10-22T16:33:07 PET" name="Default test" finished-at="2023-10-22T16:33:20 PET" duration-ms="13020">
+    <test started-at="2023-10-25T19:49:16 PET" name="Default test" finished-at="2023-10-25T19:49:31 PET" duration-ms="14996">
       <class name="Guru99.tests.TestLogin">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Guru99.tests.TestLogin@223191a6]" started-at="2023-10-22T16:33:07 PET" name="setUp" finished-at="2023-10-22T16:33:19 PET" duration-ms="11668" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Guru99.tests.TestLogin@128d2484]" started-at="2023-10-25T19:49:16 PET" name="setUp" finished-at="2023-10-25T19:49:25 PET" duration-ms="9015" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testHomePageAppearCorrect()[pri:0, instance:Guru99.tests.TestLogin@223191a6]" started-at="2023-10-22T16:33:19 PET" name="testHomePageAppearCorrect" finished-at="2023-10-22T16:33:20 PET" duration-ms="1304" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testHomePageAppearCorrect -->
-        <test-method signature="testLoginCorrect()[pri:1, instance:Guru99.tests.TestLogin@223191a6]" started-at="2023-10-22T16:33:20 PET" name="testLoginCorrect" finished-at="2023-10-22T16:33:20 PET" duration-ms="9" status="PASS">
+        <test-method signature="testLoginCorrect(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Guru99.tests.TestLogin@128d2484]" started-at="2023-10-25T19:49:26 PET" name="testLoginCorrect" data-provider="Data login" finished-at="2023-10-25T19:49:27 PET" duration-ms="816" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[mngr533455]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1q2w3e4r]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[i]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoginCorrect -->
-        <test-method is-config="true" signature="close()[pri:0, instance:Guru99.tests.TestLogin@223191a6]" started-at="2023-10-22T16:33:20 PET" name="close" finished-at="2023-10-22T16:33:20 PET" duration-ms="3" status="PASS">
+        <test-method signature="testLoginCorrect(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Guru99.tests.TestLogin@128d2484]" started-at="2023-10-25T19:49:27 PET" name="testLoginCorrect" data-provider="Data login" finished-at="2023-10-25T19:49:29 PET" duration-ms="2345" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[mngr533450]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[arunAja]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[v]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginCorrect -->
+        <test-method signature="testLoginCorrect(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Guru99.tests.TestLogin@128d2484]" started-at="2023-10-25T19:49:29 PET" name="testLoginCorrect" data-provider="Data login" finished-at="2023-10-25T19:49:30 PET" duration-ms="845" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[mngr533455]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1q2w3e4r]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[i]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginCorrect -->
+        <test-method is-config="true" signature="close()[pri:0, instance:Guru99.tests.TestLogin@128d2484]" started-at="2023-10-25T19:49:30 PET" name="close" finished-at="2023-10-25T19:49:31 PET" duration-ms="1293" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
