@@ -8,7 +8,9 @@ import org.apache.poi.xssf.usermodel.*;
 public class Util {
 	//SetUp
 	public static final String FIREFOX_PATH = "C:\\Users\\geral\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\5a6l2h23.Guru99Bank";
-	public static final int WAIT_TIME = 5;
+	public static final int WAIT_TIME = 15;
+	// rutas
+	public static final String EVIDENCE_PATH = "..\\Guru99Bank\\evidence\\";
 	//Login
 	public static final String USER_NAME = "mngr533450";
 	public static final String PWD = "arunAja";

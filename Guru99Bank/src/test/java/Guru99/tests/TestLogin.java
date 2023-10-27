@@ -1,7 +1,12 @@
 package Guru99.tests;
 
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
-import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -19,7 +24,6 @@ public class TestLogin extends Hook {
 
 	@Test(priority = 1)
 	public void testHomePageAppearCorrect() {
-		login = new LoginPage(_driver);
 
 		String loginPageTitle = login.getTitle();
 
@@ -27,9 +31,9 @@ public class TestLogin extends Hook {
 	}
 
 	@Test(priority = 0, dataProvider = "Data login")
-	public void testLoginCorrect(String user, String pwd, String estado) {
+	public void testLoginCorrect(String user, String pwd, String estado) throws IOException {
 		login = new LoginPage(_driver);
-
+		
 		login.loginToGuru99(user, pwd);
 		// setUp();
 
@@ -39,21 +43,26 @@ public class TestLogin extends Hook {
 
 			Assert.assertEquals(Util.ALERT_ERROR_LOGIN, actualBoxTxt);
 			alt.accept();
-			
+
 			System.out.println("caso 1");
 		} else {
+			login = new LoginPage(_driver);
+
 			String homePageTitle = login.getTitle();
 
 			Assert.assertEquals(homePageTitle, Util.HOME_TITLE);
-			
+
+			File screen = ((TakesScreenshot) _driver).getScreenshotAs(OutputType.FILE);
+			FileUtils.copyFile(screen, new File(Util.EVIDENCE_PATH + "evidenceLogin.jpg"));
+
 			login.clicLogOut();
-			//Alert
+			// Alert
 			Alert alt = _driver.switchTo().alert();
 			String logOut = alt.getText();
-			
+
 			Assert.assertEquals(Util.ALERT_LOGOUT_LOGIN, logOut);
 			alt.accept();
-			
+
 			System.out.println("caso 2");
 		}
 		// _driver.close();
